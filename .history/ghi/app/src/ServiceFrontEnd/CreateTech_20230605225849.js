@@ -56,7 +56,6 @@ function CreateTech () {
 
 
     return (  
-      <>
       <div className="container">
     <div className="my-5">
       <div className="row">
@@ -64,7 +63,10 @@ function CreateTech () {
           <div className="card shadow">
             <div className="card-body">
               <form className={formStyle} onSubmit={handleSubmit}  id="create-tech-form">
-                <h1 className="card-title">Add a Technician</h1>
+                <h1 className="card-title">Create a new tech</h1>
+                <p className="mb-3">
+                  Please enter the new techs information:
+                </p>
                 <div className="mb-3">
                   <input className="form-control" placeholder="First name" type="text" onChange={handleFirstNameChange} value={firstName} name="firstName" id="firstName" required></input>
                 </div>
@@ -85,7 +87,6 @@ function CreateTech () {
       </div>
     </div>
   </div>
-  </>
     )
 }
 

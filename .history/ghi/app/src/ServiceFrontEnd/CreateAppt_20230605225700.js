@@ -84,12 +84,13 @@ function CreateAppt(props) {
 
   return(
       <>
+      <h1
               <div className="container">
     <div className="my-5">
           <div className="card shadow">
             <div className="card-body">
               <form onSubmit={handleSubmit} id="appointment-form" className="form-floating">
-                <h1 className="card-title">Create a service appointment</h1>
+                <h1 className="card-title">Create a service appointment:</h1>
                 <div className="form-floating mb-3">
                       <input onChange={handleVinChange} value={vin} required type="text" id="vin" name="vin" className="form-control"></input>
                       <label htmlFor="vin">Car VIN:</label>

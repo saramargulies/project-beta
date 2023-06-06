@@ -18,7 +18,7 @@ function ListTechs() {
       }, []);
       return (
         <>
-        <div className="container mt-5"><h1>Technicians</h1></div>
+                <div className="container mt-5"><h1>Service Appointments</h1></div>
         <table className="table table-hover table-striped border border-dark-subtle shadow container-fluid mt-5">
           <thead className="table-group-divider">
             <tr>

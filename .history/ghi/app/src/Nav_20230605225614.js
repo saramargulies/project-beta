@@ -22,7 +22,7 @@ function Nav() {
                     <Link to='/technicians/create' className="dropdown-item" aria-current="page">Add a Technician</Link>
                 </li>
                 <li>
-                    <Link to='/appointments' className="dropdown-item" aria-current="page">Service Appointments</Link>
+                    <Link to='/appointments' className="dropdown-item" aria-current="page">View Appointments</Link>
                 </li>
                 <li>
                     <Link to='/appointments/create' className="dropdown-item" aria-current="page">Create a Service Appointment</Link>
