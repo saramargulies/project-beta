@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 
 
-function SalesPersonForm() {
+function CreateSalesPerson() {
     const [firstName, setFirstName] = useState('')
     const handleFirstNameChange = (event) => {
         const value = event.target.value
@@ -27,7 +27,7 @@ function SalesPersonForm() {
 
         const employeeURL = "http://localhost:8090/api/salespeople/"
         const fetchConfig = {
-            method: "POST",
+            method: "post",
             body: JSON.stringify(data),
             headers : {
                 'Content-Type': 'application/json'
@@ -44,29 +44,32 @@ function SalesPersonForm() {
 
     return (
         <>
-        <div className='row'>
-        <div className=' col-6'>
-        <div className='shadow p-4 mt-4'>
-            <h2>Add a Sales Person</h2>
+        <div className="container">
+        <div className="my-5">
+        <div className="row">
+        <div className="col">
+        <div className="card shadow">
+        <div className="card-body">
+            <h2 className='card-title'>Add a Sales Person</h2>
             <form onSubmit={handleSubmit}>
-                <div className="">
-                    <input onChange={handleFirstNameChange} value={firstName} id="first_name" required type='text'></input>
-                    <label htmlFor='firstName'>First Name</label>
+                <div className="mb-3">
+                    <input className='form-control' placeholder="First Name" name="firstName" onChange={handleFirstNameChange} value={firstName} id="first_name" required type='text'></input>
                 </div>
-                <div className="">
-                    <input onChange={handleLastNameChange} value={lastName} id="last_name" required type='text'></input>
-                    <label htmlFor='lastName'>Last Name</label>
+                <div className="mb-3">
+                    <input className='form-control' placeholder="Last Name" name="lastName" onChange={handleLastNameChange} value={lastName} id="last_name" required type='text'></input>
                 </div>
-                <div className="">
-                    <input onChange={handleIDChange} value={employeeID} id="employee_id" required type='text'></input>
-                    <label htmlFor='employee_id'>Employee ID</label>
+                <div className="mb-3">
+                    <input className='form-control' placeholder="Employee ID" name="employeeID" onChange={handleIDChange} value={employeeID} id="employee_id" required type='text'></input>
                 </div>
                 <button className="btn btn-primary">Create</button>
             </form>
         </div>
         </div>
         </div>
+        </div>
+        </div>
+        </div>
         </>
     )
 }
-export default SalesPersonForm
+export default CreateSalesPerson

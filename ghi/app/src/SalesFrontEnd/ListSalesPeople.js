@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from 'react';
 
-function ListModels() {
+function ListSalesPeople() {
 
-    const [models, setModels] = useState([]);
+    const [salespeople, setSalesPeople] = useState([]);
 
     const fetchData = async () => {
-      const url = 'http://localhost:8100/api/models/'
+      const url = 'http://localhost:8090/api/salespeople/'
       const response = await fetch(url);
       if (response.ok) {
         const data = await response.json();
-        setModels(data.models)
+        setSalesPeople(data.salespeople)
         }
       }
 
@@ -18,22 +18,22 @@ function ListModels() {
       }, []);
       return (
         <>
-        <div className="container mt-5"><h1>Models</h1></div>
+        <div className="container mt-5"><h1>Salespeople</h1></div>
         <table className="table table-hover table-striped border border-dark-subtle shadow container-fluid mt-5">
           <thead className="table-group-divider">
             <tr>
-              <th>Name</th>
-              <th>Manufacturer</th>
-              <th>Picture</th>
+              <th>Employee ID</th>
+              <th>First Name</th>
+              <th>Last Name</th>
             </tr>
           </thead>
           <tbody className="border-top border-dark-subtle">
-            {models.map(model => {
+            {salespeople.map(salesperson => {
               return (
-              <tr className="object-fit" key={model.id }>
-                <td>{ model.name }</td>
-                <td>{ model.manufacturer.name }</td>
-                <td><img className="card-img-top" src={ model.picture_url }></img></td>
+              <tr className="object-fit" key={salesperson.employee_id }>
+                <td>{ salesperson.employee_id }</td>
+                <td>{ salesperson.first_name }</td>
+                <td>{ salesperson.last_name }</td>
               </tr>
             );
             })}
@@ -42,4 +42,4 @@ function ListModels() {
         </>);
       }
 
-export default ListModels;
+export default ListSalesPeople;

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 
 function CreateManufacturer () {
-    
+
     const [manufacturer, setManufacturer] = useState('')
     const handleManufacturerChange = (event) => {
         const value = event.target.value
@@ -37,7 +37,7 @@ function CreateManufacturer () {
     }
 
 
-    return (  
+    return (
       <>
       <div className="container">
     <div className="my-5">
@@ -45,7 +45,7 @@ function CreateManufacturer () {
         <div className="col">
           <div className="card shadow">
             <div className="card-body">
-              <form onSubmit={handleSubmit}  id="create-tech-form">
+              <form onSubmit={handleSubmit}  id="create-manufacturer-form">
                 <h1 className="card-title">Add a Manufacturer</h1>
                 <div className="mb-3">
                   <input className="form-control" placeholder="Name of manufacturer" type="text" onChange={handleManufacturerChange} value={manufacturer} name="manufacturer" id="manufacturer" required></input>

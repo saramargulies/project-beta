@@ -1,39 +1,40 @@
 import React, { useEffect, useState } from 'react';
 
-function ListModels() {
+function ListCustomers() {
 
-    const [models, setModels] = useState([]);
+    const [customers, setCustomers] = useState([]);
 
     const fetchData = async () => {
-      const url = 'http://localhost:8100/api/models/'
+      const url = 'http://localhost:8090/api/customers/'
       const response = await fetch(url);
       if (response.ok) {
         const data = await response.json();
-        setModels(data.models)
+        setCustomers(data.customers)
         }
       }
-
+      console.log(customers)
       useEffect(() => {
         fetchData();
       }, []);
       return (
         <>
-        <div className="container mt-5"><h1>Models</h1></div>
+        <div className="container mt-5"><h1>Customers</h1></div>
         <table className="table table-hover table-striped border border-dark-subtle shadow container-fluid mt-5">
           <thead className="table-group-divider">
             <tr>
-              <th>Name</th>
-              <th>Manufacturer</th>
-              <th>Picture</th>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>Phone Number</th>
             </tr>
           </thead>
           <tbody className="border-top border-dark-subtle">
-            {models.map(model => {
+            {customers.map(customer => {
               return (
-              <tr className="object-fit" key={model.id }>
-                <td>{ model.name }</td>
-                <td>{ model.manufacturer.name }</td>
-                <td><img className="card-img-top" src={ model.picture_url }></img></td>
+              <tr className="object-fit" key={customer.id }>
+                <td>{ customer.first_name }</td>
+                <td>{ customer.last_name }</td>
+                <td>{ customer.phone_number }</td>
+                <td>{ customer.address }</td>
               </tr>
             );
             })}
@@ -42,4 +43,4 @@ function ListModels() {
         </>);
       }
 
-export default ListModels;
+export default ListCustomers;
