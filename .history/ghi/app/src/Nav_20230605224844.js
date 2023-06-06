@@ -25,10 +25,10 @@ function Nav() {
                     <Link to='/appointments' className="dropdown-item" aria-current="page">View Appointments</Link>
                 </li>
                 <li>
-                    <Link to='/appointments/create' className="dropdown-item" aria-current="page">Create Appointment</Link>
+                    <Link to='/appointments/create' className="dropdown-itm" aria-current="page">Create Appointment</Link>
                 </li>
-                <li>
-                    <Link to='/appointments/history' className="dropdown-item" aria-current="page">Service History</Link>
+                <li className="nav-item">
+                    <Link to='/appointments/history' className="nav-link active" aria-current="page">Service History</Link>
                 </li>
               </ul>
               </li>
