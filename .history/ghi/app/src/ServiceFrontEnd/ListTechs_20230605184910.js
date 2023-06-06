@@ -19,7 +19,7 @@ function ListTechs() {
       }, []);
       return (
         <>
-        <table className="table table-hover table-striped border border-dark-subtle shadow container-fluid mt-5">
+        <table className="table table-hover table-secondary table-striped border border-dark-subtle shadow container-fluid mt-5">
           <thead className="table-group-divider">
             <tr>
               <th>Employee ID</th>

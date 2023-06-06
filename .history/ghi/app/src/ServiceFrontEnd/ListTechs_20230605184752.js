@@ -6,7 +6,7 @@ function ListTechs() {
     const [techs, setTechs] = useState([]);
 
     const fetchData = async () => {
-      const url = 'http://localhost:8080/api/technicians/'
+      const url = 'http://project-beta-services-api-1:8000/api/technicians'
       const response = await fetch(url);
       if (response.ok) {
         const data = await response.json();
@@ -19,7 +19,7 @@ function ListTechs() {
       }, []);
       return (
         <>
-        <table className="table table-hover table-striped border border-dark-subtle shadow container-fluid mt-5">
+        <table className="table table-hover table-secondary table-striped border border-dark-subtle shadow container-fluid mt-5">
           <thead className="table-group-divider">
             <tr>
               <th>Employee ID</th>
