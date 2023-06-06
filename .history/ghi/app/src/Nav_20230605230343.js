@@ -38,32 +38,19 @@ function Nav() {
             </a>
               <ul className="dropdown-menu">
                 <li>
-                    <Link to='/' className="dropdown-item" aria-current="page">----</Link>
-                </li>
-              </ul>
-              </li>
-            <li className="nav-item dropdown">
-            <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Inventory
-            </a>
-              <ul className="dropdown-menu">
-                <li>
-                    <Link to='/manufacturers' className="dropdown-item" aria-current="page">Manufacturers</Link>
+                    <Link to='/technicians' className="dropdown-item" aria-current="page">Technicians</Link>
                 </li>
                 <li>
-                    <Link to='/manufacturers/create' className="dropdown-item" aria-current="page">Create a Manufacturer</Link>
+                    <Link to='/technicians/create' className="dropdown-item" aria-current="page">Add a Technician</Link>
                 </li>
                 <li>
-                    <Link to='/' className="dropdown-item" aria-current="page">Models</Link>
+                    <Link to='/appointments' className="dropdown-item" aria-current="page">Service Appointments</Link>
                 </li>
                 <li>
-                    <Link to='/' className="dropdown-item" aria-current="page">Create a Model</Link>
+                    <Link to='/appointments/create' className="dropdown-item" aria-current="page">Create a Service Appointment</Link>
                 </li>
                 <li>
-                    <Link to='/' className="dropdown-item" aria-current="page">Automobiles</Link>
-                </li>
-                <li>
-                    <Link to='/' className="dropdown-item" aria-current="page">Create an Automobile</Link>
+                    <Link to='/appointments/history' className="dropdown-item" aria-current="page">Service History</Link>
                 </li>
               </ul>
               </li>

@@ -32,7 +32,8 @@ function App() {
           </Route>
           <Route path="manufacturers" >
             <Route index element={ <ListManufacturers /> } />
-            <Route path="create" element={ <CreateManufacturer /> } />
+            <Route path="create" element={ <CreateManufacturer/> } />
+            <Route path="history" element={ <ServiceHistory /> } />
           </Route>
         </Routes>
       </div>

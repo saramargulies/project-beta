@@ -38,33 +38,9 @@ function Nav() {
             </a>
               <ul className="dropdown-menu">
                 <li>
-                    <Link to='/' className="dropdown-item" aria-current="page">----</Link>
+                    <Link to='/technicians' className="dropdown-item" aria-current="page">Technicians</Link>
                 </li>
-              </ul>
-              </li>
-            <li className="nav-item dropdown">
-            <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Inventory
-            </a>
-              <ul className="dropdown-menu">
-                <li>
-                    <Link to='/manufacturers' className="dropdown-item" aria-current="page">Manufacturers</Link>
-                </li>
-                <li>
-                    <Link to='/manufacturers/create' className="dropdown-item" aria-current="page">Create a Manufacturer</Link>
-                </li>
-                <li>
-                    <Link to='/' className="dropdown-item" aria-current="page">Models</Link>
-                </li>
-                <li>
-                    <Link to='/' className="dropdown-item" aria-current="page">Create a Model</Link>
-                </li>
-                <li>
-                    <Link to='/' className="dropdown-item" aria-current="page">Automobiles</Link>
-                </li>
-                <li>
-                    <Link to='/' className="dropdown-item" aria-current="page">Create an Automobile</Link>
-                </li>
+              
               </ul>
               </li>
           </ul>

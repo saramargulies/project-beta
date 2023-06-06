@@ -7,8 +7,6 @@ import CreateTech from './ServiceFrontEnd/CreateTech'
 import ListAppts from './ServiceFrontEnd/ListAppts';
 import CreateAppt from './ServiceFrontEnd/CreateAppt';
 import ServiceHistory from './ServiceFrontEnd/ServiceHistory';
-import ListManufacturers from './InventoryFrontEnd/ListManufacturers';
-import CreateManufacturer from './InventoryFrontEnd/CreateManufacturer';
 
 
 function App() {
@@ -30,9 +28,10 @@ function App() {
             <Route path="create" element={ <CreateAppt /> } />
             <Route path="history" element={ <ServiceHistory /> } />
           </Route>
-          <Route path="manufacturers" >
-            <Route index element={ <ListManufacturers /> } />
-            <Route path="create" element={ <CreateManufacturer /> } />
+          <Route path="appointments" >
+            <Route index element={ <ListAppts /> } />
+            <Route path="create" element={ <CreateAppt /> } />
+            <Route path="history" element={ <ServiceHistory /> } />
           </Route>
         </Routes>
       </div>

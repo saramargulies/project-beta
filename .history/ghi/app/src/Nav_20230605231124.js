@@ -48,10 +48,10 @@ function Nav() {
             </a>
               <ul className="dropdown-menu">
                 <li>
-                    <Link to='/manufacturers' className="dropdown-item" aria-current="page">Manufacturers</Link>
+                    <Link to='/' className="dropdown-item" aria-current="page">Manufacturers</Link>
                 </li>
                 <li>
-                    <Link to='/manufacturers/create' className="dropdown-item" aria-current="page">Create a Manufacturer</Link>
+                    <Link to='/' className="dropdown-item" aria-current="page">Create a Manufacturer</Link>
                 </li>
                 <li>
                     <Link to='/' className="dropdown-item" aria-current="page">Models</Link>
