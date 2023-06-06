@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-function ListAppts() {
+function ServiceHistory() {
 
     const [appointments, setAppointments] = useState([]);
     const [autos, setAutos] = useState([]);
@@ -82,6 +82,7 @@ function ListAppts() {
               <th>Time</th>
               <th>Technician</th>
               <th>Reason</th>
+              <th>Status</th>
               <th></th>
             </tr>
           </thead>
@@ -97,6 +98,7 @@ function ListAppts() {
                 <td>{ appointment.date_time.slice(-7) }</td>
                 <td>{ appointment.technician.first_name } { appointment.technician.last_name }</td>
                 <td>{ appointment.reason }</td>
+                <td>{ appointment.status }</td>
                 <td>
                   <button onClick={() => cancelAppointment(appointment.id)} className="btn btn-danger">
                     Cancel

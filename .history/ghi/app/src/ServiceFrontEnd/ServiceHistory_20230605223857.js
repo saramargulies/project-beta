@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-function ListAppts() {
+function ServiceHistory() {
 
     const [appointments, setAppointments] = useState([]);
     const [autos, setAutos] = useState([]);
@@ -82,12 +82,13 @@ function ListAppts() {
               <th>Time</th>
               <th>Technician</th>
               <th>Reason</th>
+              <th>Status</th>
               <th></th>
             </tr>
           </thead>
           <tbody className="border-top border-dark-subtle">
             {appointments.map(appointment => {
-              if (appointment.status === "created"){
+              if (appointment.status !== "created"){
               return (
               <tr className="object-fit" key={appointment.id }>
                 <td>{ appointment.vin }</td>
@@ -97,6 +98,7 @@ function ListAppts() {
                 <td>{ appointment.date_time.slice(-7) }</td>
                 <td>{ appointment.technician.first_name } { appointment.technician.last_name }</td>
                 <td>{ appointment.reason }</td>
+                <td>{ appointment.status }</td>
                 <td>
                   <button onClick={() => cancelAppointment(appointment.id)} className="btn btn-danger">
                     Cancel
@@ -114,4 +116,4 @@ function ListAppts() {
         </>);
       }
 
-export default ListAppts;
+export default ServiceHistory;

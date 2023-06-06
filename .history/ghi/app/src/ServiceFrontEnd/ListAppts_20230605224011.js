@@ -97,6 +97,7 @@ function ListAppts() {
                 <td>{ appointment.date_time.slice(-7) }</td>
                 <td>{ appointment.technician.first_name } { appointment.technician.last_name }</td>
                 <td>{ appointment.reason }</td>
+                <td>{ appointment.status }</td>
                 <td>
                   <button onClick={() => cancelAppointment(appointment.id)} className="btn btn-danger">
                     Cancel

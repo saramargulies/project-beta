@@ -23,7 +23,7 @@ function Nav() {
               <Link to='/appointments/create' className="nav-link active" aria-current="page">Create Appointment</Link>
           </li>
           <li className="nav-item">
-              <Link to='/appointments/history' className="nav-link active" aria-current="page">Service History</Link>
+              <Link to='/appointments/history' className="nav-link active" aria-current="page">Service History Appointment</Link>
           </li>
           </ul>
         </div>

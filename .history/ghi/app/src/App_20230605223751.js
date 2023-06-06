@@ -6,7 +6,6 @@ import ListTechs from './ServiceFrontEnd/ListTechs'
 import CreateTech from './ServiceFrontEnd/CreateTech'
 import ListAppts from './ServiceFrontEnd/ListAppts';
 import CreateAppt from './ServiceFrontEnd/CreateAppt';
-import ServiceHistory from './ServiceFrontEnd/ServiceHistory';
 
 
 function App() {
@@ -26,7 +25,7 @@ function App() {
           <Route path="appointments" >
             <Route index element={ <ListAppts /> } />
             <Route path="create" element={ <CreateAppt /> } />
-            <Route path="history" element={ <ServiceHistory /> } />
+            <Route path="create" element={ <CreateAppt /> } />
           </Route>
         </Routes>
       </div>

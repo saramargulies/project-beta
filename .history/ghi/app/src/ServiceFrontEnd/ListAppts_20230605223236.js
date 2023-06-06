@@ -45,7 +45,6 @@ function ListAppts() {
           return "No"
         }
       }
-    
       function cancelAppointment(id) {
         fetch(`http://localhost:8080/api/appointments/${id}/cancel`, {
             method: "PUT"
@@ -54,23 +53,11 @@ function ListAppts() {
             result.json().then((resp) => {
             console.warn(resp)
             })
-        })
-      }
-    
-      function finishAppointment(id) {
-        fetch(`http://localhost:8080/api/appointments/${id}/finish`, {
-            method: "PUT"
-        }).then((result) => {
-            fetchData()
-            result.json().then((resp) => {
-            console.warn(resp)
-            })
-        })
-      }
+      })
+  }
 
       return (
         <>
-        <div className="container mt-5"><h1>Active Appointments</h1></div>
         <div className="table-responsive">
         <table className="table table-hover table-striped border border-dark-subtle shadow container-fluid mt-5">
           <thead className="table-group-divider">
@@ -82,12 +69,12 @@ function ListAppts() {
               <th>Time</th>
               <th>Technician</th>
               <th>Reason</th>
+              <th>Status</th>
               <th></th>
             </tr>
           </thead>
           <tbody className="border-top border-dark-subtle">
             {appointments.map(appointment => {
-              if (appointment.status === "created"){
               return (
               <tr className="object-fit" key={appointment.id }>
                 <td>{ appointment.vin }</td>
@@ -97,16 +84,17 @@ function ListAppts() {
                 <td>{ appointment.date_time.slice(-7) }</td>
                 <td>{ appointment.technician.first_name } { appointment.technician.last_name }</td>
                 <td>{ appointment.reason }</td>
+                <td>{ appointment.status }</td>
                 <td>
                   <button onClick={() => cancelAppointment(appointment.id)} className="btn btn-danger">
                     Cancel
                   </button>
-                  <button onClick={() => finishAppointment(appointment.id)} className="btn btn-success">
+                  <button className="btn btn-success">
                     Finished
                   </button>
                 </td>
               </tr>
-            );}
+            );
             })}
           </tbody>
         </table>
