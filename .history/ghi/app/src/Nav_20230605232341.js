@@ -57,13 +57,13 @@ function Nav() {
                     <Link to='/models' className="dropdown-item" aria-current="page">Models</Link>
                 </li>
                 <li>
-                    <Link to='/models/create' className="dropdown-item" aria-current="page">Create a Model</Link>
+                    <Link to='/' className="dropdown-item" aria-current="page">Create a Model</Link>
                 </li>
                 <li>
-                    <Link to='/automobiles' className="dropdown-item" aria-current="page">Automobiles</Link>
+                    <Link to='/' className="dropdown-item" aria-current="page">Automobiles</Link>
                 </li>
                 <li>
-                    <Link to='/automobiles/create' className="dropdown-item" aria-current="page">Create an Automobile</Link>
+                    <Link to='/' className="dropdown-item" aria-current="page">Create an Automobile</Link>
                 </li>
               </ul>
               </li>

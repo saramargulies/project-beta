@@ -37,7 +37,7 @@ function App() {
           </Route>
           <Route path="models" >
             <Route index element={ <ListModels /> } />
-            {/* <Route path="create" element={ <CreateManufacturer /> } /> */}
+            <Route path="create" element={ <CreateManufacturer /> } />
           </Route>
         </Routes>
       </div>

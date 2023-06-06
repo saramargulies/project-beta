@@ -9,7 +9,6 @@ import CreateAppt from './ServiceFrontEnd/CreateAppt';
 import ServiceHistory from './ServiceFrontEnd/ServiceHistory';
 import ListManufacturers from './InventoryFrontEnd/ListManufacturers';
 import CreateManufacturer from './InventoryFrontEnd/CreateManufacturer';
-import ListModels from './InventoryFrontEnd/ListModels';
 
 
 function App() {
@@ -36,8 +35,8 @@ function App() {
             <Route path="create" element={ <CreateManufacturer /> } />
           </Route>
           <Route path="models" >
-            <Route index element={ <ListModels /> } />
-            {/* <Route path="create" element={ <CreateManufacturer /> } /> */}
+            <Route index element={ <list /> } />
+            <Route path="create" element={ <CreateManufacturer /> } />
           </Route>
         </Routes>
       </div>
