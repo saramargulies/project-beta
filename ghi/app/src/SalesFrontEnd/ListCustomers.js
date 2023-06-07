@@ -25,6 +25,7 @@ function ListCustomers() {
               <th>First Name</th>
               <th>Last Name</th>
               <th>Phone Number</th>
+              <th>Address</th>
             </tr>
           </thead>
           <tbody className="border-top border-dark-subtle">
