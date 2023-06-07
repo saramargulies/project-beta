@@ -2,7 +2,7 @@ from django.contrib import admin
 from .models import Appointment, AutomobileVO, Technician
 
 @admin.register(Appointment)
-class AppointmentAdmin(admin.ModelAdmin):
+class AppoinmentAdmin(admin.ModelAdmin):
     list_display = (
         "date_time",
         "reason",
@@ -22,9 +22,4 @@ class TechnicianAdmin(admin.ModelAdmin):
     )
 
 @admin.register(AutomobileVO)
-class AutomobileVOAdmin(admin.ModelAdmin):
-    list_display = (
-        "vin",
-        "sold",
-        "id"
-    )
+class AutomobileVO

@@ -30,9 +30,9 @@ def poll(repeat=True):
                 defaults = {"sold": car["sold"]}
                 try:
                     obj = AutomobileVO.objects.get(vin=car["vin"])
-                    if car["sold"] != obj.sold:
+                    if car["sold"] != obj["sold"]:
                         for key, value in defaults.items():
-                            setattr(obj, key, value)
+                        setattr(obj, key, value)
                         obj.save()
                     
                 except AutomobileVO.DoesNotExist:

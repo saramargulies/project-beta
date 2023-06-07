@@ -27,17 +27,14 @@ def poll(repeat=True):
             response = requests.get(url)
             content = json.loads(response.content)
             for car in content["autos"]:
-                defaults = {"sold": car["sold"]}
+                defaults = {"sold": False}
                 try:
                     obj = AutomobileVO.objects.get(vin=car["vin"])
-                    if car["sold"] != obj.sold:
-                        for key, value in defaults.items():
-                            setattr(obj, key, value)
-                        obj.save()
-                    
-                except AutomobileVO.DoesNotExist:
-                    new_values = {"vin": car["vin"], "sold": car["sold"]}
-                    obj = AutomobileVO(**new_values)
+                    obj.save()
+                except Person.DoesNotExist:
+                    new_values = {"first_name": "John", "last_name": "Lennon"}
+                    new_values.update(defaults)
+                    obj = Person(**new_values)
                     obj.save()
                 # AutomobileVO.objects.update_or_create(vin=car["vin"], sold=car["sold"])
         
