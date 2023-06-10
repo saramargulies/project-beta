@@ -30,7 +30,6 @@ function CreateAutomobile () {
         if (response.ok) {
           const data = await response.json();
           setModels(data.models)
-          console.log(data)
           }
       }
 
@@ -42,8 +41,6 @@ function CreateAutomobile () {
         data.year = year
         data.vin = vin
         data.model_id = model
-
-        console.log(data)
 
         const autoURL = 'http://localhost:8100/api/automobiles/'
         const fetchConfig = {
